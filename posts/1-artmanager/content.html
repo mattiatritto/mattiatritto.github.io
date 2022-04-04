@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ArtManager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/custom.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+  </head>
+
+
+  <body>
+
+    <!--Navigation Bar-->
+
+    <div class="w3-bar w3-padding-large" style="background-color: #B9C0DA">
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">CV</a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">Home</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="font-size: 18px; padding: 20px;" onclick="hamMenu()">&#9776;</a>
+    </div>
+
+    <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #B9C0DA">
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">Home</a>
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">CV</a>
+    </div>
+
+    <div class="w3-container">
+
+      <br>
+      <br>
+      <h1 class="w3-center" style="font-size: 50px">ArtManager</h1>
+      <br>
+      <br>
+      <br>
+
+      <div class="img-container w3-center w3-mobile">
+        <img class="w3-center w3-image" src="img/cover.jpg">
+      </div>
+
+      <br>
+      <br>
+      <br>
+
+      <!-- Content -->
+
+      <div class="content">
+        <p><strong>ArtManager</strong> is a software that tracks all the artworks of an artist or a collector. It's a web app
+          able to perform <strong>advanced research operations </strong> on all the art production of an artist in a
+          fast and intuitive way.</p>
+
+          <br>
+          <br>
+
+
+          <h2 class="w3-left" style="font-size: 30px">The old filing system</h2>
+
+          <br>
+          <br>
+
+          <p>Before the adoption of ArtManager, a very primordial system was adopted (photographing the artworks and placing
+            them in folders renamed for example "40 x 50 25AC34"). The advantage of this solution is the simplicity of insertion
+            or updating, the disadvantage is clearly that it is not possible to perform advanced search criteria (for example if
+            you wanted to see all the 40 x 40 paintings that contain "flowers" in the title, it is not possible to do it: you have
+            to manually enter folder by folder and check if the search conditions are verified).</p>
+
+            <br>
+            <br>
+
+            <h2 class="w3-left" style="font-size: 30px">ArtManager - the perfect solution</h2>
+
+            <br>
+            <br>
+
+            <p>Since my grandfather passed away, our family has decided to collect all the artistic production in an organic and
+              detailed way. To do this we used ArtManager, a software that I developed capable of displaying the artworks both in
+              <strong>tabular format</strong> and in a <strong>visual format</strong> like a photo-gallery.<br>
+
+              The real advantage of this solution is the possibility of
+              filtering searches based on parameters such as measurements, year of production, title, type and so on. The software
+              is also a <strong>small CRM</strong>, capable of tracking customers and galleries and keeping track of all the transactions of artworks
+              that have taken place.</p>
+
+              <br>
+              <br>
+
+              <h2 class="w3-left" style="font-size: 30px">How ArtManager works</h2>
+
+              <br>
+              <br>
+
+              <p>The real beating heart of the application is the <strong>database</strong>, which stores all information relating to artworks, customers,
+                sales and frames. The web application is written in <em>PHP</em>, and acts as a middleware between the database and the human operator,
+                so it does nothing more than create a user-friendly interface which interacts with the database.<br>
+
+                The application has also been designed to be used by more expert users, for this reason in each screen it is possible to <strong>search
+                in advanced mode</strong> using queries (for example if you want to see all the artworks that have lateral measurements less than 40 cm, it is
+                not possible to do this with the simple search, but it is always possible using the advanced search mode).
+              </p>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <footer class="w3-container w3-center" style="background-color: #B9C0DA">
+      <br>
+      <br>
+      <br>
+      <a href="https://github.com/mattiatritto" target="_blank"><i id="gh" class="fa fa-github fa-4x" style="padding:50px"></i></a>
+      <a href="https://it.linkedin.com/in/mattia-tritto-29344b1a5" target="_blank"><i id="ln" class="fa fa-linkedin fa-4x" style="padding:50px"></i></a>
+      <br>
+      <br>
+      <br>
+    </footer>
+
+
+    <script>
+    function hamMenu() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    if (screen.width <= 720){
+      document.getElementById("ln").classList.remove("fa-4x");
+      document.getElementById("gh").classList.remove("fa-4x");
+
+      document.getElementById("ln").classList.add("fa-2x");
+      document.getElementById("gh").classList.add("fa-2x");
+    }
+    </script>
+  </body>
+</html>

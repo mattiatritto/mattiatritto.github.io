@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mattia Tritto - Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/custom.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+
+    <!--Navigation Bar-->
+
+    <div class="w3-bar w3-padding-large" style="background-color: #B9C0DA">
+      <a href="cv.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">CV</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">Home</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="font-size: 18px; padding: 20px; background: #B9C0DA;" onclick="hamMenu()">&#9776;</a>
+    </div>
+
+    <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #B9C0DA">
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">Home</a>
+      <a href="cv.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">CV</a>
+    </div>
+
+    <!--Hero Section-->
+
+    <div class="w3-container w3-cell-row background-color-hero-section">
+
+      <div class="w3-container w3-padding-large w3-center w3-cell w3-cell-middle w3-mobile">
+        <h1 class="font-strange"> <strong>Looking</strong> for my next <em><strong>opportunity</strong></em> <br>to make a change. The <em><strong>digital</strong></em> way.</h1>
+      </div>
+
+      <div class="w3-container w3-cell w3-mobile w3-center">
+        <img class="w3-center w3-image" src="images/me.png">
+      </div>
+
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <!--Blog Articles-->
+
+    <div class="w3-container blog-section">
+
+      <h1 class="w3-padding-large">Tech Projects</h1>
+      <br>
+
+      <div class="w3-row">
+
+        <!-- First Post -->
+
+        <div class="w3-padding-large w3-third">
+          <div class="w3-display-container">
+            <a href="posts/1-artmanager/content.html"><img src="posts/1-artmanager/img/cover.jpg" class="w3-round-xlarge" alt="PentaDelay" style="width:100%;"></a>
+          </div>
+          <div><h2>ArtManager</h2></div>
+          <div class="w3-text-gray"><p>ArtManager is a software designed for artists and collectors and it can track artworks, clients, frames and sales. The app runs on the most modern browsers.</p></div>
+          <div>March, 2022</div>
+        </div>
+
+        <!-- Second Post -->
+
+        <div class="w3-padding-large w3-third articles">
+          <div class="w3-display-container">
+            <a href="posts/2-pasciutiwebsite/content.html"><img src="posts/2-pasciutiwebsite/img/cover.jpg" class="w3-round-xlarge" alt="Pasciuti's website" style="width: 100%"></a>
+          </div>
+
+          <div><h2>Antonio Pasciuti's website</h2></div>
+          <div class="w3-text-gray"><p>Site of a well-known contemporary landscape painter, created following a minimalist and essential graphic style, to give greater importance to the artworks published by the artist.</p></div>
+          <div>October, 2021</div>
+        </div>
+
+        <!-- Third Post -->
+
+        <div class="w3-padding-large w3-third articles">
+          <div class="w3-display-container">
+            <a href="posts/3-pentadelay/content.html"><img src="posts/3-pentadelay/img/cover.jpg" class="w3-round-xlarge" alt="PentaDelay" style="width:100%"></a>
+          </div>
+          <div><h2>PentaDelay</h2></div>
+          <div class="w3-text-gray"><p>PentaDelay is a Java software able to manage students delay in an autonomus way without use of personnel.</p></div>
+          <div>June, 2020</div>
+        </div>
+
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer class="w3-container w3-center" style="background-color: #B9C0DA">
+      <br>
+      <br>
+      <br>
+      <a href="https://github.com/mattiatritto" target="_blank"><i id="gh" class="fa fa-github fa-4x" style="padding:50px"></i></a>
+      <a href="https://it.linkedin.com/in/mattia-tritto-29344b1a5" target="_blank"><i id="ln" class="fa fa-linkedin fa-4x" style="padding:50px"></i></a>
+      <br>
+      <br>
+      <br>
+    </footer>
+
+
+    <script>
+    function hamMenu() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    if (screen.width <= 720){
+      document.getElementById("ln").classList.remove("fa-4x");
+      document.getElementById("gh").classList.remove("fa-4x");
+
+      document.getElementById("ln").classList.add("fa-2x");
+      document.getElementById("gh").classList.add("fa-2x");
+    }
+    </script>
+  </body>
+</html>

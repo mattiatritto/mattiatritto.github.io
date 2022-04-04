@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Antonio Pasciuti's Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/custom.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+  </head>
+
+
+  <body>
+
+    <!--Navigation Bar-->
+
+    <div class="w3-bar w3-padding-large" style="background-color: #B9C0DA">
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">CV</a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">Home</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="font-size: 18px; padding: 20px;" onclick="hamMenu()">&#9776;</a>
+    </div>
+
+    <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #B9C0DA">
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">Home</a>
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">CV</a>
+    </div>
+
+    <div class="w3-container">
+
+      <br>
+      <br>
+      <h1 class="w3-center" style="font-size: 50px">Antonio Pasciuti's website</h1>
+      <br>
+      <br>
+      <br>
+
+      <div class="img-container w3-center w3-mobile">
+        <img class="w3-center w3-image" src="img/cover.jpg">
+      </div>
+
+      <br>
+      <br>
+      <br>
+
+      <!-- Content -->
+
+      <div class="content">
+        <p><strong>www.antoniopasciuti.com</strong> is the new site created for my grandfather, a contemporary artist known for his landscape and abstract artworks.</p>
+
+          <br>
+          <br>
+
+
+          <h2 class="w3-left" style="font-size: 30px">The old website</h2>
+
+          <br>
+          <br>
+
+          <p>Grandpa already owned a site built in 2008, but it clearly wasn't doing well anymore as it wasn't aligned with the new trends.
+            The old site was difficult to maintain, was not responsive, did not have a clear navigation, and was not optimized for SEO. In fact,
+            if you searched for <em>Antonio Pasciuti</em>  on Google the site did not even appear on the first page!</p>
+
+          <br>
+          <br>
+
+          <h2 class="w3-left" style="font-size: 30px">The new website</h2>
+
+          <br>
+          <br>
+
+          <p>The new site I have created follows a very <strong>minimalist</strong> line, precisely to give greater importance to the artist's artworks. I chose
+            to use <strong>dark colors</strong> as backgrounds (black for the nav-bar and a dark gray for the background) because grandpa has always preferred to
+            combine black as a background for many of his paintings. Furthermore, the site is also <strong>bi-lingual</strong> (most of the traffic comes from abroad,
+            so it was the right choice).
+          </p>
+
+          <br>
+          <br>
+
+          <h2 class="w3-left" style="font-size: 30px">Future updates</h2>
+
+          <br>
+          <br>
+
+          <p>We will bring <strong>new content</strong> to the site in the future. A content that is particularly close to my heart and that I can't wait to publish is my grandfather's
+            work on color <em>Chromes and its harmonic processes</em>, a collection of artworks, each created with a different color palette. Each color palette is not random,
+            but is the subject of a <strong>scientific study of chroma</strong>.
+          </p>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <footer class="w3-container w3-center" style="background-color: #B9C0DA">
+      <br>
+      <br>
+      <br>
+      <a href="https://github.com/mattiatritto" target="_blank"><i id="gh" class="fa fa-github fa-4x" style="padding:50px"></i></a>
+      <a href="https://it.linkedin.com/in/mattia-tritto-29344b1a5" target="_blank"><i id="ln" class="fa fa-linkedin fa-4x" style="padding:50px"></i></a>
+      <br>
+      <br>
+      <br>
+    </footer>
+
+
+    <script>
+    function hamMenu() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    if (screen.width <= 720){
+      document.getElementById("ln").classList.remove("fa-4x");
+      document.getElementById("gh").classList.remove("fa-4x");
+
+      document.getElementById("ln").classList.add("fa-2x");
+      document.getElementById("gh").classList.add("fa-2x");
+    }
+    </script>
+  </body>
+</html>

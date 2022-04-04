@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PentaDelay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/custom.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+  </head>
+
+
+  <body>
+
+    <!--Navigation Bar-->
+
+    <div class="w3-bar w3-padding-large" style="background-color: #B9C0DA">
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">CV</a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">Home</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="font-size: 18px; padding: 20px;" onclick="hamMenu()">&#9776;</a>
+    </div>
+
+    <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #B9C0DA">
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">Home</a>
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">CV</a>
+    </div>
+
+    <div class="w3-container">
+
+      <br>
+      <br>
+      <h1 class="w3-center" style="font-size: 50px">PentaDelay</h1>
+      <br>
+      <br>
+      <br>
+
+      <div class="img-container w3-center w3-mobile">
+        <img class="w3-center w3-image" src="img/cover.jpg">
+      </div>
+
+      <br>
+      <br>
+      <br>
+
+      <!-- Content -->
+
+      <div class="content">
+
+        <p><strong>PentaDelay</strong> is a Java software able to <strong>manage students delay</strong> in an autonomus way without use of personnel. The late student,
+          using a bar code reader at the school entrance, can scan his / her identity document, and the software independently recognizes
+          the student, records the delay and prints a paper to be presented to the teacher.</p>
+
+        <br>
+        <br>
+
+
+        <h2 class="w3-left" style="font-size: 30px">The old delay management system</h2>
+
+        <br>
+        <br>
+
+        <p>
+          The old delay management system worked as follows: at the entrance there was usually someone, who had the task of registering the late arrivals of the students. To record the delays,
+          he used a small script written on <em>MS Access</em> where by entering the student's name and surname, the script records the delay by increasing a counter associated with the late student and
+          filled in a paper that was <strong>manually printed</strong> by the personnel. The student entered the classroom with this paper, and the teacher recorded the delay on the electronic register.
+          The problems related to this implementation were: use of personnel at the entrance, and a <strong>serious bug</strong> in this management system: if the operator inadvertently mistyped the student's
+          name or surname, the system recognized him / her as a new student and the delays were reset (I assure you that it often happened xD). It was important to keep track of the number of delays as we
+          only had 5 in a year.
+        </p>
+
+        <br>
+        <br>
+
+        <h2 class="w3-left" style="font-size: 30px">The new delay management system</h2>
+
+        <br>
+        <br>
+
+        <p>The new delay management system has been designed in such a way as to resolve these huge problems of the previous system.
+          First of all, the new system has an <strong>updated copy of all current students attending the school</strong> (database exported from the
+          electronic at the beginning of each new year), and records delays by receiving the <strong>student's tax code as input</strong> (on the back
+          of the ID) in bar code format.<br>
+
+          At the entrance to the school, a <strong>bar code reader</strong> has been installed, so that the late student scans the bar code on the back of
+          the ID, and the system autonomously recognizes the student, records the delay, and independently prints the ticket to be presented
+          in class to the teacher (all <strong>without staff personnel</strong>!)<br>
+
+          Clearly the management system is a <strong>CRUD</strong> system <em>(Create, Read, Update and Delete)</em>, therefore it is always possible to manually insert
+          or delete delays in case of malfunctions of the bar code reader.
+        </p>
+      </div>
+
+      <div class="img-container w3-center w3-mobile">
+        <img class="w3-center w3-image" src="img/system-summary.jpg">
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer class="w3-container w3-center" style="background-color: #B9C0DA">
+      <br>
+      <br>
+      <br>
+      <a href="https://github.com/mattiatritto" target="_blank"><i id="gh" class="fa fa-github fa-4x" style="padding:50px"></i></a>
+      <a href="https://it.linkedin.com/in/mattia-tritto-29344b1a5" target="_blank"><i id="ln" class="fa fa-linkedin fa-4x" style="padding:50px"></i></a>
+      <br>
+      <br>
+      <br>
+    </footer>
+    
+    <script>
+    function hamMenu() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    if (screen.width <= 720){
+      document.getElementById("ln").classList.remove("fa-4x");
+      document.getElementById("gh").classList.remove("fa-4x");
+
+      document.getElementById("ln").classList.add("fa-2x");
+      document.getElementById("gh").classList.add("fa-2x");
+    }
+    </script>
+  </body>
+</html>

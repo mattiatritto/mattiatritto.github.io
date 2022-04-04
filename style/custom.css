@@ -1,0 +1,25 @@
+/*Only for test purposes*/
+
+.cbd {border: 1px solid red;}
+
+/*Used for text in the Hero Section*/
+
+.font-strange{font-family: 'Neucha'; font-size: 60px;}
+.background-color-hero-section{background-color: #ADC6F8; color: white; padding-bottom: 130px; padding-top: 130px;}
+
+/** Font Family uses in the website **/
+
+html,body,h1,h2,h3,h4,h5,h6, p, span{font-family: "Poppins", sans-serif}
+h1, h2{font-weight: 600;}
+
+
+/** Used for paragraphs in posts **/
+
+.content {padding-left: 80px; padding-right: 80px; font-size: 20px; line-height:200%;}
+
+/** Media queries **/
+
+@media screen and (max-width: 720px) {
+  .articles{margin-top: 50px;}
+  .content {padding-left: 20px; padding-right: 20px;}
+}
