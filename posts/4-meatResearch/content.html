@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPXGDNZ489"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZPXGDNZ489');
+</script>
+    <title>Meat analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/custom.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+  </head>
+
+
+  <body>
+
+    <!--Navigation Bar-->
+
+    <div class="w3-bar w3-padding-large" style="background-color: #B9C0DA">
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">CV</a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">Home</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="font-size: 18px; padding: 20px;" onclick="hamMenu()">&#9776;</a>
+    </div>
+
+    <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #B9C0DA">
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">Home</a>
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">CV</a>
+    </div>
+
+    <div class="w3-container">
+
+      <br>
+      <br>
+      <h1 class="w3-center" style="font-size: 50px">Meat consumption: an analysis of <br> trends and enviromental risks</h1>
+      <br>
+      <br>
+      <br>
+
+      <!-- Content -->
+
+      <div class="content">
+
+        <p>Meat has been an integral part of the human diet for centuries. However, in recent years, 
+          there has been a growing debate about the potential <strong>negative effects of meat consumption on 
+          human health and the environment</strong>. This report aims to address three main questions: 
+          <br><br> <ul><li><strong>How has meat consumption increased </strong> over the years, and which countries have experienced significant or minimal growth? What could be the underlying reasons for these trends?</li> 
+          <li>How does a <strong>nation's wealth influence meat consumption</strong>, and what is the correlation between these two variables? </li>
+          <li>What is the <strong>environmental impact of the meat supply chain </strong>? </li></ul>
+        </p>
+
+        <br>
+        <br>
+
+
+        <h2 class="w3-left" style="font-size: 30px">Data and Methodology</h2>
+
+        <br>
+        <br>
+
+        <p>
+          The data used for this report was sourced from <a href="https://www.ourworldindata.org" target="_blank">ourworldindata.org</a>, a website containing hundreds of readily available datasets under a Creative Commons license. The following is a brief description of the data used:
+          <br> <br><ul> <li><strong> Per capita meat consumption by country</strong>, measured in kilograms per person per year. The food intended for human consumption is indirectly derived from all other uses. The dataset covers the period from 1961 to 2017.</li>
+            <li><strong>Per capita meat consumption by country, population data, and GDP per capita for each country on an annual basis. </strong> </li>
+            <li> <strong>Data on greenhouse gas emissions in CO2 equivalents per kilogram of product, divided by each phase of the supply chain </strong> (2018).</li>
+        </p>
+
+        <br>
+        <br>
+
+        <h2 class="w3-left" style="font-size: 30px">Increase in per capita meat consumption: a growing trend</h2>
+
+        <br>
+        <br>
+
+        <p>
+          Global meat consumption per capita has been on the rise. According to the analysis conducted using R, 
+          per capita meat consumption increased by 69% from 1961 to 2017. The choropleth map illustrates the countries 
+          with the highest per capita meat consumption in 2017, with African nations and India displaying relatively low 
+          consumption due to cultural influences.
+        </p>
+
+        <br>
+        <br>
+
+        <div class="img-container w3-center w3-mobile">
+          <img class="w3-center w3-image" src="img/cloropethmap.png">
+        </div>
+
+        <br>
+        <br>
+
+        <h2 class="w3-left" style="font-size: 30px">Correlation between meat consumption and GDP per capita</h2>
+
+        <br>
+        <br>
+
+        <p>
+          Meat consumption has significant economic implications at the national level. There is a strong correlation 
+          between meat consumption and a nation's Gross Domestic Product (GDP). The scatterplot demonstrates the positive 
+          correlation between these two variables. Countries with higher GDP tend to have higher per capita meat consumption, 
+          while lower-income countries exhibit lower consumption levels.
+        </p>
+
+        <br>
+        <br>
+
+        <div class="img-container w3-center w3-mobile">
+          <img class="w3-center w3-image" src="img/scatterplot.png">
+        </div>
+
+        <br>
+        <br>
+        <h2 class="w3-left" style="font-size: 30px">The environmental impact of meat production</h2>
+
+        <br>
+        <br>
+
+        <p>
+          Meat production has a significant environmental impact, particularly in terms of greenhouse gas emissions. 
+          The meat industry contributes to a substantial amount of these emissions, which contribute to climate change. 
+          The treemap highlights the CO2 equivalents produced by various food items, with beef and lamb accounting for over 40% of emissions.
+        </p>
+
+        <br>
+        <br>
+        <div class="img-container w3-center w3-mobile">
+          <img class="w3-center w3-image" src="img/treemap1.png">
+        </div>
+        <br>
+        <br>
+
+        <p>
+          Furthermore, a breakdown of the emissions associated with beef production reveals that the majority of greenhouse 
+          gas emissions (56%) come from livestock rearing rather than transportation (0.5%). This finding emphasizes the 
+          importance of considering dietary choices, such as reducing meat consumption, to have a significant impact on emissions.
+        </p>
+
+        <br>
+        <br>
+
+        <div class="img-container w3-center w3-mobile">
+          <img class="w3-center w3-image" src="img/treemap2.png">
+        </div>
+
+        <br>
+        <br>
+
+
+        <h2 class="w3-left" style="font-size: 30px">Conclusions</h2>
+
+        <br>
+        <br>
+
+        <p>
+          The ongoing debate surrounding meat consumption's effects on health and the 
+          environment has shed light on important considerations. The report demonstrates 
+          the global increase in per capita meat consumption, the correlation between meat 
+          consumption and a nation's wealth, and the environmental impact of the meat supply chain. 
+          It also suggests alternative protein sources with lower environmental footprints, such as insects 
+          and algae, as potential substitutes for meat. By making informed dietary choices, individuals can 
+          contribute to mitigating the environmental impact associated with meat production.
+        </p>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer class="w3-container w3-center" style="background-color: #B9C0DA">
+      <br>
+      <br>
+      <br>
+      <a href="https://github.com/mattiatritto" target="_blank"><i id="gh" class="fa fa-github fa-4x" style="padding:50px"></i></a>
+      <a href="https://it.linkedin.com/in/mattia-tritto-29344b1a5" target="_blank"><i id="ln" class="fa fa-linkedin fa-4x" style="padding:50px"></i></a>
+      <br>
+      <br>
+      <br>
+    </footer>
+    
+    <script>
+    function hamMenu() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    if (screen.width <= 720){
+      document.getElementById("ln").classList.remove("fa-4x");
+      document.getElementById("gh").classList.remove("fa-4x");
+
+      document.getElementById("ln").classList.add("fa-2x");
+      document.getElementById("gh").classList.add("fa-2x");
+    }
+    </script>
+  </body>
+</html>
