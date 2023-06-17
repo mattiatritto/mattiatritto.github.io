@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPXGDNZ489"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZPXGDNZ489');
+</script>
+    <title>Bachelor thesis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/custom.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+  </head>
+
+
+  <body>
+
+    <!--Navigation Bar-->
+
+    <div class="w3-bar w3-padding-large" style="background-color: #B9C0DA">
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">CV</a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">Home</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="font-size: 18px; padding: 20px;" onclick="hamMenu()">&#9776;</a>
+    </div>
+
+    <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #B9C0DA">
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">Home</a>
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">CV</a>
+    </div>
+
+    <div class="w3-container">
+
+      <br>
+      <br>
+      <h1 class="w3-center" style="font-size: 50px">Calibration and trajectory estimation of a stereo camera for underwater vehicles using OpenCV and ORB-SLAM3</h1>
+      <br>
+      <br>
+      <br>
+
+      <!-- Content -->
+
+      <div class="content">
+
+        <p><em>If you want to download the full thesis <a href="../../cv/bachelor_thesis.pdf" download="Calibration and trajectory estimation of a stereo camera using OpenCV and ORB-SLAM3.pdf">click here</a></em>. If you want to have also the scripts used for calibration and trajectory estimation just email me.</p>
+        <br>
+
+
+        <p>
+          <strong>Autonomous underwater vehicles</strong> (AUVs) are an essential tool for exploring the vast and complex ocean environment. 
+          These vehicles can perform various tasks, such as oceanographic surveys, environmental monitoring, and search and 
+          rescue operations. However, the success of these tasks depends on the vehicle's ability to navigate autonomously 
+          and accurately in the underwater environment.
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Simultaneous localization and mapping</strong> (SLAM) is a popular navigation technique that uses onboard sensors to create a map of the vehicle's
+          surroundings and estimate its position relative to the map. However, the accuracy of SLAM is affected by various factors, such as sensor noise, 
+          environmental conditions, and the presence of obstacles. Thus, there is a need to develop robust SLAM algorithms that can handle these challenges.
+        </p>
+
+        <br>
+        <br>
+
+        <div class="img-container w3-center w3-mobile">
+          <img class="w3-center w3-image" src="img/orb-slam3.png">
+        </div>
+
+
+        <br>
+        <br>
+
+        <p>
+          My bachelor thesis focuses on the calibration process of stereo cameras for underwater autonomous navigation. It consists of the following key elements: 
+          <ul>
+            <li>chapter 1 provides a <strong>brief introduction</strong> to Autonomous Underwater Vehicles (AUVs) and highlights the significance of stereo cameras in maritime environments. Emphasis is placed on the importance of camera calibration in the context of underwater autonomous navigation; </li>
+            <li>chapter 2 explains the process of performing a simple <strong>monocular calibration</strong>. This serves as a fundamental step in understanding stereo calibration;</li>
+            <li>chapter 3 explores the <strong>reconstruction of a 3D scene</strong> using two identical cameras that have already been calibrated. This chapter outlines the methodology and steps involved in achieving accurate 3D reconstruction; </li>
+            <li>chapter 4 focuses on <strong>reconstructing a 3D scene using two identical cameras that are not calibrated</strong>. The objective is to calibrate these cameras and follow the steps described in Chapter 3 for accurate reconstruction; </li>
+            <li>chapter 5 focuses on explaining the <strong>code for stereo reconstruction</strong>, the installation of a <strong>docker-version of ORB-SLAM3</strong> and how to perform a <strong>trajectory estimation</strong> using Python.</li>
+          </ul>
+        </p>
+
+        <br>
+
+        <p>
+          The research will continue on improving the accuracy and reliability of the stereo calibration in the underwater environment and evaluating their performance through simulations and field experiments.
+        </p>
+
+        <br>
+        <br>
+
+        <h2 class="w3-left" style="font-size: 30px">Acknowledgments</h2>
+
+        <br>
+        <br>
+
+        <p>
+          This thesis owes its success to the invaluable support of my supervisors <strong>Paolo Lino</strong> and <strong>Nikolai Svishchev</strong>, as well as the contributions of my colleague <strong>Amalia</strong>.
+        </p>
+
+        <br>
+        <br>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer class="w3-container w3-center" style="background-color: #B9C0DA">
+      <br>
+      <br>
+      <br>
+      <a href="https://github.com/mattiatritto" target="_blank"><i id="gh" class="fa fa-github fa-4x" style="padding:50px"></i></a>
+      <a href="https://it.linkedin.com/in/mattiatritto" target="_blank"><i id="ln" class="fa fa-linkedin fa-4x" style="padding:50px"></i></a>
+      <br>
+      <br>
+      <br>
+    </footer>
+    
+    <script>
+    function hamMenu() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    if (screen.width <= 720){
+      document.getElementById("ln").classList.remove("fa-4x");
+      document.getElementById("gh").classList.remove("fa-4x");
+
+      document.getElementById("ln").classList.add("fa-2x");
+      document.getElementById("gh").classList.add("fa-2x");
+    }
+    </script>
+  </body>
+</html>
