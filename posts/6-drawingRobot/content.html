@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPXGDNZ489"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZPXGDNZ489');
+</script>
+    <title>Bachelor thesis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/custom.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+  </head>
+
+
+  <body>
+
+    <!--Navigation Bar-->
+
+    <div class="w3-bar w3-padding-large" style="background-color: #B9C0DA">
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">CV</a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">Home</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="font-size: 18px; padding: 20px;" onclick="hamMenu()">&#9776;</a>
+    </div>
+
+    <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #B9C0DA">
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">Home</a>
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">CV</a>
+    </div>
+
+    <div class="w3-container">
+
+      <br>
+      <br>
+      <h1 class="w3-center" style="font-size: 50px">Drawing robot</h1>
+      <br>
+      <br>
+      <br>
+
+      <!-- Content -->
+
+      <div class="content">
+
+        <div class="img-container w3-center w3-mobile">
+          <img class="w3-center w3-image" src="img/cover.jpg">
+        </div>
+
+        <br>
+        <br>
+
+        <p>During my summer university break, I made the choice to create a <strong>drawing robot</strong>. This robot has the ability to ascend vertical surfaces like a whiteboard, where it can draw shapes and images using a marker. The feasibility of all this was made achievable thanks to the <em>Arduino Engineering Kit</em>.</p>
+
+        <br>
+        <br>
+        <br>
+        <h2 class="w3-left" style="font-size: 30px">Electronics used</h2>
+
+        <br>
+        <br>
+
+        <p>The electronis used in this project were:
+          <ul>
+            <li>1 <strong>Arduino Nano 33 IoT</strong>;</li>
+            <li>1 <strong>Arduino Nano Motor Carrier</strong> (contains H-bridges to run the motors);</li>
+            <li>2 <strong>DC motors</strong> with a gear ratio of 1:100 (to increase the torque);</li>
+            <li>2 <strong>Hall effect encoders</strong> (to read angular speed of the motors);</li>
+            <li>1 <strong>servo motor</strong> (to raise and lower the marker).</li>
+          </ul>
+        </p> 
+
+        <br>
+        <br>
+        <br>
+        <h2 class="w3-left" style="font-size: 30px">The math and physics behind the drawing robot</h2>
+
+        <br>
+        <br>
+
+        <p>After having assembled and wired the robot, with some basic physics and math 
+          principle, I figured it out how to move the robot along an XY plane (the whiteboard). 
+          The robot moved thanks to the two DC motors that <strong>rolled up or unrolled the wire</strong> attached 
+          to two pulleys placed at the two upper ends of the whiteboard. The mathematical aspects 
+          related to the robot's motion are summurized in the following <a href="./img/drawing_robot_physics_behind.pdf" download="Drawing robot physics behind.pdf">document</a>.</p>
+
+
+        <br>
+        <br>
+        <br>
+        <h2 class="w3-left" style="font-size: 30px">Images processing software to transform any digital image into speed information for the motors</h2>
+
+        <br>
+        <br>
+
+        <p>To write any image, the robot uses some image conversion algorithm that uses several <strong>images processing MATLAB libraries</strong> that accept in input images 
+          and outputs a sequence of connected little segments that the robot is going to draw on the whiteboard. Here's an example of the drawing robot that draws a <a href="../../cv/drawing_robot_heart.mov" download="Drawing robot heart.mov">heart</a>, 
+          and here a <a href="../../cv/drawing_robot_flower.mov" download="Drawing robot flower.mov">flower</a>.</p>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer class="w3-container w3-center" style="background-color: #B9C0DA">
+      <br>
+      <br>
+      <br>
+      <a href="https://github.com/mattiatritto" target="_blank"><i id="gh" class="fa fa-github fa-4x" style="padding:50px"></i></a>
+      <a href="https://it.linkedin.com/in/mattiatritto" target="_blank"><i id="ln" class="fa fa-linkedin fa-4x" style="padding:50px"></i></a>
+      <br>
+      <br>
+      <br>
+    </footer>
+    
+    <script>
+    function hamMenu() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    if (screen.width <= 720){
+      document.getElementById("ln").classList.remove("fa-4x");
+      document.getElementById("gh").classList.remove("fa-4x");
+
+      document.getElementById("ln").classList.add("fa-2x");
+      document.getElementById("gh").classList.add("fa-2x");
+    }
+    </script>
+  </body>
+</html>
