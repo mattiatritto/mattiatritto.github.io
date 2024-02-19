@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPXGDNZ489"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZPXGDNZ489');
+</script>
+    <title>ML Artwork Classification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/custom.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+  </head>
+
+
+  <body>
+
+    <!--Navigation Bar-->
+
+    <div class="w3-bar w3-padding-large" style="background-color: #B9C0DA">
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">CV</a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">Home</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="font-size: 18px; padding: 20px;" onclick="hamMenu()">&#9776;</a>
+    </div>
+
+    <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #B9C0DA">
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">Home</a>
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">CV</a>
+    </div>
+
+    <div class="w3-container">
+
+      <br>
+      <br>
+      <h1 class="w3-center" style="font-size: 50px">Machine Learning artwork classification by using Principal Component Analysis and Logistic Regression</h1>
+      <br>
+      <br>
+      <br>
+
+      <!-- Content -->
+
+      <div class="content">
+
+        <p>
+          This project is all about a <strong>Machine Learning image classification model</strong> able to discern between figurative and abstract artworks of my Grandpa's artworks. Its utility extends significantly for previous <strong>clients who have acquired artworks in the past and want to obtain specific details</strong>, such as the temporal range in which a particular painting was created. 
+
+          <br>
+          <br>
+          The operational concept is this one: past clients can upload a photograph of their artwork. Subsequently, the uploaded image undergoes a Principal Component Analysis (PCA) dimensionality reduction function. Then a Logistic Regressor can determine whether the resultant data point resides above or below the hyperplane that delineates abstract from figurative artworks. 
+          
+          <br>
+          <br>
+
+          This process not only enriches the client's understanding of the artwork but also adds a sophisticated layer to the intersection of art and technology, where algorithms decipher the temporal and stylistic dimensions encapsulated within each masterpiece.
+
+          <br>
+          <br>
+
+          In the future, this model will be seamlessly integrated into the official website <a href="https://www.antoniopasciuti.com">www.antoniopasciuti.com</a>. Clients and art enthusiasts will have the opportunity to access this powerful tool directly on the website. By simply navigating to the website, users can leverage the model's capabilities.
+
+          <br>
+          <br>
+
+          For a more in-depth exploration of the technical details behind the construction of this Machine Learning model, you can refer to the comprehensive PDF presentation. This document provides a detailed overview of the step-by-step process involved in building and fine-tuning the model, offering a deeper dive into the underlying technical aspects involved.
+
+          <br>
+          <br>
+          <br>
+        </p>
+        <iframe src="img/Machine Learning Artwork Classification.pdf" width="100%" height="1000px"></iframe>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer class="w3-container w3-center" style="background-color: #B9C0DA">
+      <br>
+      <br>
+      <br>
+      <a href="https://github.com/mattiatritto" target="_blank"><i id="gh" class="fa fa-github fa-4x" style="padding:50px"></i></a>
+      <a href="https://it.linkedin.com/in/mattiatritto" target="_blank"><i id="ln" class="fa fa-linkedin fa-4x" style="padding:50px"></i></a>
+      <br>
+      <br>
+      <br>
+    </footer>
+    
+    <script>
+    function hamMenu() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    if (screen.width <= 720){
+      document.getElementById("ln").classList.remove("fa-4x");
+      document.getElementById("gh").classList.remove("fa-4x");
+
+      document.getElementById("ln").classList.add("fa-2x");
+      document.getElementById("gh").classList.add("fa-2x");
+    }
+    </script>
+  </body>
+</html>
