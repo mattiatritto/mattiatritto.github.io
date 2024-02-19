@@ -11,6 +11,26 @@
 
   gtag('config', 'G-ZPXGDNZ489');
 </script>
+
+<style>
+    /* Style for the download message (optional) */
+    .download-message {
+    display: none;
+  }
+
+  @media (max-width: 720px) {
+    /* Hide the iframe for small screens */
+    iframe {
+      display: none;
+    }
+    
+    /* Show a paragraph with a download link */
+    .download-message {
+      display: block;
+    }
+  }
+</style>
+
     <title>ML Artwork Classification</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../style/w3.css">
@@ -78,7 +98,10 @@
           <br>
           <br>
         </p>
-        <iframe src="img/Machine Learning Artwork Classification.pdf" style="width: 100%; height: 100vh; border: none;"></iframe>
+        <iframe src="img/Machine Learning Artwork Classification.pdf" width="100%" height="1000px"></iframe>
+        <p class="download-message">
+          Download the PDF presentation <a href="img/Machine Learning Artwork Classification.pdf" download>here</a>.
+        </p>
       </div>
     </div>
 
