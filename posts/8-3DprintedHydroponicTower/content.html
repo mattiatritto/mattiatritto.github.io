@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPXGDNZ489"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZPXGDNZ489');
+</script>
+<style>
+    /* Style for the download message (optional) */
+    .download-message {
+    display: none;
+  }
+
+  @media (max-width: 720px) {
+    /* Hide the iframe for small screens */
+    iframe {
+      display: none;
+    }
+    
+    /* Show a paragraph with a download link */
+    .download-message {
+      display: block;
+    }
+  }
+</style>
+
+    <title>3D printed Hydroponic Tower</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/custom.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+  </head>
+
+
+  <body>
+
+    <!--Navigation Bar-->
+
+    <div class="w3-bar w3-padding-large" style="background-color: #B9C0DA">
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">CV</a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">Home</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="font-size: 18px; padding: 20px;" onclick="hamMenu()">&#9776;</a>
+    </div>
+
+    <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #B9C0DA">
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">Home</a>
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">CV</a>
+    </div>
+
+    <div class="w3-container">
+
+      <br>
+      <br>
+      <h1 class="w3-center" style="font-size: 50px">3D printed Hydroponic Tower</h1>
+      <br>
+      <br>
+      <br>
+
+      <!-- Content -->
+
+      <div class="content">
+
+        <p>
+          A hydroponic tower is a <strong>vertical gardening system</strong> designed for cultivating plants <strong>without the use of soil</strong>. Instead, it relies on a <strong>nutrient-rich water solution</strong> that circulates through the tower, providing essential minerals and elements directly to the plant roots. Each tier of the tower typically contains pockets or slots for planting, allowing for efficient use of vertical space. 
+          <br><br>In my case, I 3D printed a hydroponic tower as a space-saving solution for my balcony garden. This innovative approach allows me to grow herbs like mint and basil vertically, optimizing limited space while providing a controlled environment for plant growth. The 3D-printed tower not only serves as a functional and compact gardening solution but also adds a touch of modernity to my balcony space.
+        </p>
+        <br>
+        <br>
+
+        <h2 class="w3-left" style="font-size: 30px">Materials and electronics used</h2>
+
+        <br>
+        <br>
+
+        <p>The materials used for constructing the tower are the following:
+          <ul>
+            <li>1 Kg of <strong>Green PETG</strong>;</li>
+            <li>2 Kg of <strong>Brown PETG</strong> (for printing around 5-6 modules);</li>
+            <li>1 Kg of <strong>White PETG</strong> (for printing the pot cover);</li>
+            <li>1 <strong>FEJO pot</strong> that you can buy in the nearest Ikea;</li>
+            <li>12 <strong>M3 Nuts and Bolts</strong> for assembling the 4 parts of the pot cover.</li>
+          </ul>
+          I opted to 3D print the parts of the hydroponic tower using PETG due to its excellent weather resistance. PLA, another common 3D printing material, is not suitable for outdoor use as it lacks the durability and weather-resistant properties necessary for prolonged exposure.
+          <br>
+          <br>
+
+          The electronics used are the following:
+          <ul>
+            <li>1 <strong>Arduino Nano ESP32 IoT</strong>;</li>
+            <li>1 <strong>RELE KY-019</strong> (for printing around 5-6 modules);</li>
+            <li>1 <strong>Step-up module</strong>;</li>
+            <li>1 <strong>12V water pump</strong>.</li>
+          </ul>
+        </p>
+        <br>
+        <br>
+        <h2 class="w3-left" style="font-size: 30px">Assembly part</h2>
+        <br>
+        <br>After having printed <a href="img/filesHydroponicTower.zip" download>all the necessary parts</a> and assembled the pot cover with M3 nuts and bolts, I assembled the tower just by stacking all the components one by one.
+        <br>
+        I have assembled the electronic components by soldering them together, following a straightforward electrical schematic.
+        <br>
+        <br>
+        <div class="img-container w3-center w3-mobile">
+          <img class="w3-center w3-image" src="img/soldering.jpg">
+        </div>
+        <br>
+        <br>
+        <h2>Programming the Arduino Nano ESP32 IoT</h2>
+        The code has the underlying concept that the Arduino activate for 5 minutes every 30 minutes. The specific pin for the relay, which determines where the command wire has been connected, is determined by the location where the device is sold.
+        <pre>
+          <code>
+            // Define the relay pin based on where the device is sold
+            const int relayPin = YOUR_RELAY_PIN;
+            
+            void setup() {
+              // Initialize the relay pin as an output
+              pinMode(relayPin, OUTPUT);
+            
+              // Initial state: relay is off
+              digitalWrite(relayPin, LOW);
+            }
+            
+            void loop() {
+              // Activate the relay for 5 minutes every 30 minutes
+              digitalWrite(relayPin, HIGH);  // Turn on the relay
+              delay(300000);  // 5 minutes in milliseconds
+              digitalWrite(relayPin, LOW);   // Turn off the relay
+              delay(1800000); // 25 minutes (30 minutes total) in milliseconds
+            }
+          </code>
+        </pre>
+        <br>
+        <br>
+        <h2 class="w3-left" style="font-size: 30px">Final results</h2>
+        <br>
+        <br>
+        <p>
+        The video showcases the ultimate outcome, featuring the pump operating:
+        </p> 
+
+        <br>
+        <br>
+
+        <h2 class="w3-left" style="font-size: 30px">Further improvements</h2>
+        <br>
+        <br>
+        <p>
+          In the near future, my plan is to encapsulate all the components within a 3D printed case to safeguard the electronics. Additionally, I aim to integrate sensors for measuring the pH of the water. This enhancement will provide more comprehensive monitoring capabilities, allowing me to adjust and optimize nutrient levels consistently, ensuring an optimal water environment for the plants.
+        </p> 
+        <br>
+        <br>
+
+        <h2 class="w3-left" style="font-size: 30px">Acknoledgemnts</h2>
+        <br>
+        <br>
+        <p>
+          I would like to express my gratitude to the YouTuber "overVolt" for inspiring this project. After watching one of his videos showcasing a similar version to mine, I found the motivation to embark on this endeavor. If you're interested, I highly recommend checking out his video for valuable insights and inspiration.
+          <br>
+          <br>
+I would also like to extend heartfelt thanks to my girlfriend, who played a crucial role in making this project possible. For my birthday, she generously gifted me the necessary electronics, laying the foundation for the realization of this endeavor. Her support and thoughtful gesture have been instrumental in bringing this project to life.
+        </p> 
+      </div>
+
+
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer class="w3-container w3-center" style="background-color: #B9C0DA">
+      <br>
+      <br>
+      <br>
+      <a href="https://github.com/mattiatritto" target="_blank"><i id="gh" class="fa fa-github fa-4x" style="padding:50px"></i></a>
+      <a href="https://it.linkedin.com/in/mattiatritto" target="_blank"><i id="ln" class="fa fa-linkedin fa-4x" style="padding:50px"></i></a>
+      <br>
+      <br>
+      <br>
+    </footer>
+    
+    <script>
+    function hamMenu() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    if (screen.width <= 720){
+      document.getElementById("ln").classList.remove("fa-4x");
+      document.getElementById("gh").classList.remove("fa-4x");
+
+      document.getElementById("ln").classList.add("fa-2x");
+      document.getElementById("gh").classList.add("fa-2x");
+    }
+    </script>
+  </body>
+</html>
