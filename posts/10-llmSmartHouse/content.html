@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPXGDNZ489"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZPXGDNZ489');
+</script>
+<style>
+    /* Style for the download message (optional) */
+    .download-message {
+    display: none;
+  }
+
+  @media (max-width: 720px) {
+    /* Hide the iframe for small screens */
+    iframe {
+      display: none;
+    }
+    
+    /* Show a paragraph with a download link */
+    .download-message {
+      display: block;
+    }
+  }
+</style>
+
+    <title>LLM based smart home controller</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/custom.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+  </head>
+
+
+  <body>
+
+    <!--Navigation Bar-->
+
+    <div class="w3-bar w3-padding-large" style="background-color: #B9C0DA">
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">CV</a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">Home</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="font-size: 18px; padding: 20px;" onclick="hamMenu()">&#9776;</a>
+    </div>
+
+    <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #B9C0DA">
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">Home</a>
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">CV</a>
+    </div>
+
+    <div class="w3-container">
+
+      <br>
+      <br>
+      <h1 class="w3-center" style="font-size: 50px">LLM based mapping natural language statements into knowledge graphs updates</h1>
+      <br>
+      <br>
+      <br>
+
+      <!-- Content -->
+
+      <div class="content">
+        In a recent project, I had the exciting opportunity to explore the intersection of AI and knowledge management by integrating large language models (LLMs) with a knowledge graph. The goal was to enable <strong>natural language queries to perform real-time updates on a knowledge graph </strong> using custom CRUD (Create, Read, Update, Delete) operations. And I wasn't alone: this was a collaborative effort with my girlfriend, Rossella Tritto, and we had the solid foundation of the application framework provided by SWOT, a research team from Politecnico di Bari. Here's how we tackled this project together.
+
+        <br>
+        <br>
+        <br>
+        <h2>The Challenge: From Natural Language to Knowledge Graph Updates</h2>
+        <br>
+        
+        At the heart of the project there was the idea to make an LLM interact with a knowledge graph built using the Web Ontology Language (OWL). The knowledge graph contained entities (devices, sensors, etc.), and we wanted the LLM to understand user queries like "Add a new device to the living room" or "What's the status of lamp 1?" and automatically convert them into knowledge graph updates.
+        
+        <br>
+        This is where the application framework provided by the SWOT research team came into play. They built a robust system architecture that supported the knowledge graph operations, which made it easier for us to focus on extending and integrating it with our CRUD functionalities. Rossella and I worked together to build these operations, ensuring they could smoothly interface with the LLM.
+        
+
+        <br>
+        <br>
+        <br>
+
+        <h2>Building CRUD Functions</h2>
+
+        <br>
+        
+        The first step was to implement the basic CRUD functions within the existing framework:
+
+        <ul>
+          <li><strong>Adding Individuals</strong>: This functionality allowed us to add new entities, like a device or a sensor, to the knowledge graph. If a user asked, "Add a new lamp to the living room," the LLM would convert that into a valid graph operation, associating the new device with its correct class and properties.</li>
+          <li><strong>Updating Individuals</strong>: For queries that needed to modify an existing entity (like changing the temperature of an air conditioner), we built functions to enable updates to the knowledge graph based on natural language statements.</li>
+          <li><strong>Removing Individuals and Assertions</strong>: Some queries involved removing entities or their relationships from the graph. For example, deleting a sensor from a room or removing a specific property from an entity.</li>
+        </ul>
+
+        <br>
+        <br>
+        <br>
+        
+        <h2>Testing and Evaluating the System</h2>
+
+        <br>
+        Once the CRUD functions were integrated into the LLM, it was time to test how well the system performed. Rossella and I created a set of 100 test queries, divided into categories like:
+
+        <ul>
+          <li><strong>Information Retrieval</strong>: For queries that asked about devices, rooms, or the entire home.</li>
+          <li><strong>Device Control</strong>: For setting specific devices or groups of devices, such as "Turn off the air conditioner."</li>
+          <li><strong>Advanced Queries</strong>: Complex queries conditioned by sensor data, such as "Turn off the lights in all rooms where no one is present."</li>
+        </ul>
+      
+        Using the automated testing framework that we have build, we ran these queries and evaluated the system based on three criteria:
+        
+        <ul>
+          <li><strong>Function Call Accuracy:</strong> Was the correct function invoked by the LLM?</li>
+          <li><strong>Parameter Accuracy</strong>: Were the correct parameters used in the function?</li>
+          <li><strong>Chat Output Accuracy</strong>: Was the LLM's response accurate and coherent?</li>
+        </ul>
+        
+        The system performed exceptionally well in most categories, achieving over 90% accuracy for function calls and parameters. The advanced queries, especially those conditioned by sensor data, were more challenging for the LLM to handle, which was expected due to their complexity.
+      
+        <br>
+        <br>
+        <br>
+
+        <h2>Lessons Learned and What's Next</h2>
+        
+        <br>
+        This project highlighted the incredible potential of combining LLMs with structured systems like knowledge graphs. The ability to manipulate complex data using natural language opens up countless opportunities, especially in domains like smart homes and IoT.
+        However, we also recognized areas for improvement. Handling more advanced queries, for instance, requires either more powerful LLMs or specific optimizations, which we plan to explore. We also discussed experimenting with few-shot prompting to further improve accuracy in more complex scenarios.
+        With the solid foundation provided by the SWOT framework, we're optimistic about the future. Offline LLMs, like the one we used (dolphine-mistral), offer excellent privacy and cost savings considerations in smart home applications.
+        Collaborating on this project with Rossella and having the support of the SWOT research team has been an amazing experience. Together, we've created a system that truly highlights the future potential of AI in everyday life. And we can't wait to continue pushing these boundaries in future projects!
+
+
+
+        <br>
+        <p>
+          You can read in more detail the project in this paper:
+        </p>
+        <br>
+        <iframe src="img/Report.pdf" width="100%" height="1000px"></iframe>
+        <p class="download-message">
+          Download the paper here: <a href="img/Report.pdf" download>here</a>.
+        </p>
+      </div>
+
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer class="w3-container w3-center" style="background-color: #B9C0DA">
+      <br>
+      <br>
+      <br>
+      <a href="https://github.com/mattiatritto" target="_blank"><i id="gh" class="fa fa-github fa-4x" style="padding:50px"></i></a>
+      <a href="https://it.linkedin.com/in/mattiatritto" target="_blank"><i id="ln" class="fa fa-linkedin fa-4x" style="padding:50px"></i></a>
+      <br>
+      <br>
+      <br>
+    </footer>
+    
+    <script>
+    function hamMenu() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    if (screen.width <= 720){
+      document.getElementById("ln").classList.remove("fa-4x");
+      document.getElementById("gh").classList.remove("fa-4x");
+
+      document.getElementById("ln").classList.add("fa-2x");
+      document.getElementById("gh").classList.add("fa-2x");
+    }
+    </script>
+  </body>
+</html>
