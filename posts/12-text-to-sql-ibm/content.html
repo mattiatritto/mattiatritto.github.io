@@ -23,11 +23,9 @@
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
   </head>
 
-
   <body>
 
     <!--Navigation Bar-->
-
     <div class="w3-bar w3-padding-large" style="background-color: #B9C0DA">
       <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">CV</a>
       <a href="../../index.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">Home</a>
@@ -40,84 +38,47 @@
     </div>
 
     <div class="w3-container">
-
-      <br>
-      <br>
-      <h1 class="w3-center" style="font-size: 50px">Boosting Text-To-SQL tasks by using LLMs, in collaboration with IBM</h1>
-      <br>
-      <br>
-      <br>
+      <br><br>
+      <h1 class="w3-center" style="font-size: 50px">GradeSQL: Outcome Reward Models for Ranking SQL Queries from Large Language Models</h1>
+      <br><br><br>
 
       <!-- Content -->
-
       <div class="content">
-
         <p>
-            <strong>Large Language Models</strong> (LLMs) are transforming how we interact with structured data, enabling users to query databases using natural language. 
-            This shift is particularly evident in the <strong>Text-to-SQL</strong> task, where models translate human questions into SQL queries.
-            However, translating complex queries accurately remains a challenge for current models.
-        </p>
-
-        <br>
-
-        <p>
-            My master's thesis investigates how we can <strong>boost the performance of LLMs</strong> on the Text-to-SQL task—not by increasing model size or pre-training data, but by <strong>scaling inference time</strong>.
-            Specifically, I explore techniques like <em>Best-of-N sampling</em>, <em>Majority Voting</em>, and the use of an LLM as a judge to select the best SQL query from multiple candidates.
+          My master’s thesis, now published as <a href="https://arxiv.org/abs/2509.01308" target="_blank"><strong>GradeSQL: Outcome Reward Models for Ranking SQL Queries from Large Language Models</strong></a>, explores how <strong>Outcome Reward Models (ORMs)</strong> can significantly improve the <strong>Text-to-SQL</strong> task.
         </p>
         <br>
-        <br>
-
         <p>
-            The thesis is structured around:
-            <ul>
-            <li>An overview of <strong>Text-to-SQL systems</strong> and their limitations;</li>
-            <li>A detailed comparison of <strong>decoding strategies</strong> (greedy, beam search, random sampling);</li>
-            <li>Evaluation of <strong>inference-time techniques</strong> like Best-of-N with heuristic filters, LLM judges, and progressive refinement;</li>
-            <li>A custom implementation of an <strong>Outcome Reward Model (ORM)</strong> to judge SQL output quality;</li>
-            <li>Extensive benchmarking on the <strong>BIRD dataset</strong> using state-of-the-art models like OMNI-SQL and IBM Granite.</li>
-            </ul>
+          Text-to-SQL enables users to query databases using natural language, but even powerful LLMs struggle with complex, compositional queries. Traditional approaches such as <em>Best-of-N</em> (BoN) or <em>Majority Voting</em> (Maj) rely on surface heuristics, often failing to capture <strong>semantic correctness</strong>.
         </p>
-
         <br>
-
         <p>
-            The results demonstrate that small models, when enhanced with inference-time scaling, can rival much larger models—highlighting a promising direction for cost-effective NLP applications.
+          In this work, we introduce and evaluate <strong>Outcome Reward Models</strong> (ORMs) as a principled, test-time method for ranking generated SQL queries. By scoring outputs based on semantic alignment rather than syntax alone, ORMs outperform ex-BoN and Maj on BIRD and SPIDER benchmarks, achieving <strong>+4.33%</strong> and <strong>+2.10%</strong> execution accuracy improvements over ex-BoN respectively.
         </p>
-
         <br>
+        <p>
+          We also show that fine-tuning ORM models on SQL-focused LLMs like OmniSQL further boosts results, and that ORMs scale well with larger candidate pools. This approach highlights a cost-effective path for using <strong>smaller models enhanced by inference-time scaling</strong> to rival much larger systems.
+        </p>
         <br>
-
+        <p>
+          Read the full paper here: <a href="https://arxiv.org/abs/2509.01308" target="_blank">https://arxiv.org/abs/2509.01308</a>
+        </p>
+        <br>
         <h2 class="w3-left" style="font-size: 30px">Acknowledgments</h2>
-
-        <br>
-        <br>
-
+        <br><br>
         <p>
-            I would like to thank my supervisor <strong>Prof. Fedelucio Narducci</strong> and co-supervisor <strong>Dr. Dario Di Palma</strong> for their continuous support and guidance throughout this research.
+          I would like to thank my supervisor <strong>Prof. Fedelucio Narducci</strong> and co-supervisor <strong>Dr. Dario Di Palma</strong> for their continuous support and guidance throughout this research.
         </p>
-
-        <br>
-        <br>
-        </div>
-
+      </div>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br><br><br><br><br><br>
 
     <footer class="w3-container w3-center" style="background-color: #B9C0DA">
-      <br>
-      <br>
-      <br>
+      <br><br><br>
       <a href="https://github.com/mattiatritto" target="_blank"><i id="gh" class="fa fa-github fa-4x" style="padding:50px"></i></a>
       <a href="https://it.linkedin.com/in/mattiatritto" target="_blank"><i id="ln" class="fa fa-linkedin fa-4x" style="padding:50px"></i></a>
-      <br>
-      <br>
-      <br>
+      <br><br><br>
     </footer>
     
     <script>
