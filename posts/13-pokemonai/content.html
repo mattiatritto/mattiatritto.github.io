@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPXGDNZ489"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZPXGDNZ489');
+</script>
+    <title>Pokémon AI Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/custom.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+
+    <!--Navigation Bar-->
+    <div class="w3-bar w3-padding-large" style="background-color: #B9C0DA">
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">CV</a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-64 w3-hover-none w3-right w3-hover-text-gray w3-hide-small" style="font-size: 18px; padding: 50px;">Home</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="font-size: 18px; padding: 20px;" onclick="hamMenu()">&#9776;</a>
+    </div>
+
+    <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #B9C0DA">
+      <a href="../../index.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">Home</a>
+      <a href="../../cv.html" class="w3-bar-item w3-button w3-padding-32 w3-hover-none w3-hover-text-gray w3-center" style="font-size: 20px;">CV</a>
+    </div>
+
+    <div class="w3-container">
+      <br><br>
+      <h1 class="w3-center" style="font-size: 50px">PikaPikaGen – Generating Pokémon Sprites from Text</h1>
+<div class="content">
+  <p>
+    My project <a href="https://github.com/mattiatritto/PokemonAI" target="_blank"><strong>PikaPikaGen</strong></a> focuses on <strong>text-to-image generation</strong> for Pokémon sprites. Inspired by models like DALL·E and Stable Diffusion, it generates high-quality 215×215 pixel Pokémon sprites directly from natural language descriptions.
+  </p>
+  <br>
+  <p>
+    The architecture combines a <strong>BERT-mini text encoder</strong> with a <strong>Transformer encoder stack</strong>, a custom <strong>Attention Block</strong> for global context, and a <strong>CNN-based image decoder</strong> with cross-attention at each stage. This design allows the system to align words like “blue scales” or “fire tail” with corresponding sprite regions.
+  </p>
+  <br>
+  <p>
+    <strong>Dataset preprocessing</strong> included splitting a Pokémon sprite dataset into train/validation/test sets, deterministic augmentation (rotating sprites at multiple angles), and enriching textual prompts with type/classification details. Training was done on an Apple M2 GPU with reproducibility ensured via fixed seeds and parameterized scripts.
+  </p>
+  <br>
+  <p>
+    <strong>Experiments:</strong> We explored dropout, CLIP loss, data augmentation, and enriched prompts. Despite improvements in training loss, the model consistently overfitted and struggled to generalize on validation/test sets. The final recommendation is to adopt a <strong>latent diffusion model</strong> (Stable Diffusion-based) for substantial performance gains.
+  </p>
+  <br>
+  <p>
+    This project demonstrates the challenges and opportunities of applying modern <strong>text-to-image architectures</strong> to niche domains like Pokémon sprite generation.  
+    Full report: <a href="https://mattiatritto.github.io/posts/13-pokemonai/content.html" target="_blank">Blog Post</a> | GitHub: <a href="https://github.com/mattiatritto/PokemonAI" target="_blank">Repository</a>
+  </p>
+</div>
+
+
+    <br><br><br><br><br><br>
+
+    <footer class="w3-container w3-center" style="background-color: #B9C0DA">
+      <br><br><br>
+      <a href="https://github.com/mattiatritto" target="_blank"><i id="gh" class="fa fa-github fa-4x" style="padding:50px"></i></a>
+      <a href="https://it.linkedin.com/in/mattiatritto" target="_blank"><i id="ln" class="fa fa-linkedin fa-4x" style="padding:50px"></i></a>
+      <br><br><br>
+    </footer>
+    
+    <script>
+    function hamMenu() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    if (screen.width <= 720){
+      document.getElementById("ln").classList.remove("fa-4x");
+      document.getElementById("gh").classList.remove("fa-4x");
+
+      document.getElementById("ln").classList.add("fa-2x");
+      document.getElementById("gh").classList.add("fa-2x");
+    }
+    </script>
+  </body>
+</html>
